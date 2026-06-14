@@ -36,6 +36,7 @@ function App() {
   const [transactions, setTransactions] = useState(() => {
   const savedTransactions =
     localStorage.getItem("transactions");
+    if (savedTransactions){return JSON.parse(savedTransactions);}
 
   return  [
         {
