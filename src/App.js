@@ -34,7 +34,12 @@ function App() {
   const [editId, setEditId] = useState(null);
 
   const [transactions, setTransactions] = useState(() => {
-  return  [
+  const savedTransactions = localStorage.getItem("transactions");
+
+  if (savedTransactions) {
+    return JSON.parse(savedTransactions);
+  }
+    return  [
         {
           id: 1,
           amount: 10000,
