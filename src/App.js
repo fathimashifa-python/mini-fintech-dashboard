@@ -34,12 +34,7 @@ function App() {
   const [editId, setEditId] = useState(null);
 
   const [transactions, setTransactions] = useState(() => {
-  const savedTransactions = localStorage.getItem("transactions");
-
-  if (savedTransactions) {
-    return JSON.parse(savedTransactions);
-  }
-    return  [
+  const demoTransactions =  [
         {
           id: 1,
           amount: 10000,
@@ -104,6 +99,11 @@ function App() {
             date: "2026-06-09"
           }
       ];
+    const savedTransactions=localStorage.getItem("transactions");
+    if (savedTransactions!==null){
+      return JSON.parse(savedTransactions);
+    }
+    return demoTransactions
     });
   useEffect(() => {
   localStorage.setItem(
