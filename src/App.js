@@ -34,7 +34,6 @@ function App() {
   const [editId, setEditId] = useState(null);
 
   const [transactions, setTransactions] = useState(() => {
-    
   return  [
         {
           id: 1,
