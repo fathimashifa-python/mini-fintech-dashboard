@@ -37,9 +37,7 @@ function App() {
   const savedTransactions =
     localStorage.getItem("transactions");
 
-  return savedTransactions
-    ? JSON.parse(savedTransactions)
-    : [
+  return  [
         {
           id: 1,
           amount: 10000,
@@ -103,7 +101,8 @@ function App() {
   type: "Expense",
   date: "2026-06-09"
 }
-      ];});
+      ];
+    });
   useEffect(() => {
   localStorage.setItem(
     "transactions",
