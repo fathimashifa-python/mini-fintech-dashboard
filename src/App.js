@@ -100,10 +100,10 @@ function App() {
           }
       ];
     const savedTransactions=localStorage.getItem("transactions");
-    if (savedTransactions!==null){
-      return JSON.parse(savedTransactions);
+    if (savedTransactions===null){
+      return demoTransactions;
     }
-    return demoTransactions
+    return JSON.parse(savedTransactions);
     });
   useEffect(() => {
   localStorage.setItem(
@@ -346,7 +346,12 @@ const filteredTransactions = transactions.filter(
         "Delete all transactions?"
       )
     ) {
-      setTransactions([]);
+      const emptyTransactions = [];
+setTransactions(emptyTransactions);
+localStorage.setItem(
+  "transactions",
+  JSON.stringify(emptyTransactions)
+);
     }
   }}
 >
