@@ -192,9 +192,6 @@ useEffect(() => {
         )
       : "None";
       
-
-
-
   const chartData = Object.keys(expenseCategories).map(
   (category) => ({
     name: category,
@@ -236,6 +233,8 @@ const filteredTransactions = transactions.filter(
         
         <input
           type="number"
+          min="0"
+          step="0.01"
           placeholder="Amount"
           value={amount}
           onChange={(e) =>
@@ -342,9 +341,6 @@ const filteredTransactions = transactions.filter(
   </h2>
 </div>
       </div>
-      
-
-
       
       <div className="card">
   <h2>💡 Recommendation</h2>
