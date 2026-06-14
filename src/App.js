@@ -54,8 +54,56 @@ function App() {
           type: "Expense",
           date: "2026-06-13",
         },
-      ];
-});
+        {
+  id: 3,
+  amount: 12000,
+  category: "Freelance",
+  type: "Income",
+  date: "2026-06-04"
+},
+{
+  id: 4,
+  amount: 2500,
+  category: "Groceries",
+  type: "Expense",
+  date: "2026-06-05"
+},
+{
+  id: 5,
+  amount: 12000,
+  category: "Rent",
+  type: "Expense",
+  date: "2026-06-01"
+},
+{
+  id: 6,
+  amount: 1800,
+  category: "Utilities",
+  type: "Expense",
+  date: "2026-06-06"
+},
+{
+  id: 7,
+  amount: 800,
+  category: "Internet",
+  type: "Expense",
+  date: "2026-06-07"
+},
+{
+  id: 8,
+  amount: 3500,
+  category: "Transportation",
+  type: "Expense",
+  date: "2026-06-08"
+},
+{
+  id: 9,
+  amount: 2200,
+  category: "Entertainment",
+  type: "Expense",
+  date: "2026-06-09"
+}
+      ];});
   useEffect(() => {
   localStorage.setItem(
     "transactions",
